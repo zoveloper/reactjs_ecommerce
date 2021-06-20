@@ -1,0 +1,15 @@
+.app{
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.main{
+    margin-left: 250px;
+}
+
+@media screen and (max-width: 600px) {
+    .main{
+        margin-left: 0px;
+    }
+}
