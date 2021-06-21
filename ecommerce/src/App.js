@@ -6,7 +6,6 @@ import './app.css'
 const App = () => {
     return (
         <div className="app">
-            <ResponsiveDrawer/>
             <main className="main" >
             <Products/>
             </main>
