@@ -23,6 +23,8 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: drawerWidth,
+    
+    
   },
   MobiledrawerPaper: {
     width: '100%',
