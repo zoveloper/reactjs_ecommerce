@@ -11,14 +11,12 @@ function FormInput({ name, label, required }) {
       <Controller
         name={name}
         control={control}
-        render = {({value})=> (
+        render={() => (
             <TextField
         label={label}
         fullWidth
         required={required}
         error={isError}
-        value={undefined}
-        
       />
       )}
             />

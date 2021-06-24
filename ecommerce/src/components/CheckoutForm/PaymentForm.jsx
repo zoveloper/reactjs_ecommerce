@@ -6,17 +6,17 @@ import { loadStripe } from '@stripe/stripe-js';
 import Review from './Review';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
-
+console.log(stripePromise)
 const PaymentForm = ({ checkoutToken, nextStep, backStep, shippingData, onCaptureCheckout }) => {
   const handleSubmit = async (event, elements, stripe) => {
     event.preventDefault();
-
+    console.log(shippingData)
     if (!stripe || !elements) return;
 
     const cardElement = elements.getElement(CardElement);
 
     const { error, paymentMethod } = await stripe.createPaymentMethod({ type: 'card', card: cardElement });
-
+    console.log(error)
     if (error) {
       console.log('[error]', error);
     } else {
